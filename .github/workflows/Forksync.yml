@@ -1,0 +1,18 @@
+name: Forksync
+
+on: [fork]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: TG908/fork-sync@v1.1.4 
+      with:
+        github_token:: ${{ secrets.GITHUB_TOKEN }}
+        # The title of the pull request
+        pr_title: 'Contribution on educational links'
+        # The message in the pull request
+        pr_message: |
+          Fork on 'links' to help other student''s to learn :)
+          We'll try to let student's have the informations they need 
+          Thanks for forking this repo and thanks for your contribution
